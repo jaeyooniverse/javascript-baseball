@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>숫자 야구 게임</title>
+</head>
+	
+<body>
+	<div id="app">
+		<h1>⚾ 숫자 야구 게임</h1>
+		<h2>규칙</h2>
+		<p>1부터 9까지 서로 다른 숫자 4개를 입력해 주세요!<br/></p>
+		<p>정답에 같은 숫자가 있지만 위치가 다르면 <strong>볼</strong></p>
+		<p>정답에 같은 숫자가 있고 위치가 같으면 <strong>스트라이크</strong></p>
+		<p>정답에 같은 숫자가 하나도 없으면 <strong>아웃</strong></p>
+		<form>
+      <input type="text" id="user-input" />
+      <button id="submit">확인</button>
+    </form>
+		<h2>📄 결과</h2>
+    <div id="result"></div>
+		<h2>📄 경기 기록</h2>
+		<div id="logs"></div>
+	</div>
+  <script type="module" src="src/index.js"></script>
+</body>
+
+</html>
