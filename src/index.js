@@ -38,6 +38,17 @@ const checkZero = (input) => {
       return false;
     }
   }
+
+  return true;
+};
+
+const checkInteger = (input) => {
+  for (let i = 0; i < input.length; i++) {
+    if (isNaN(input[i]) === true) {
+      return false;
+    }
+  }
+
   return true;
 };
 
@@ -45,11 +56,13 @@ const checkInput = (input) => {
   let newInput = new Set(input); // 집합으로 중복 제거
   newInput = [...newInput]; // 집합을 다시 배열로
   const checkZeroResult = checkZero(newInput);
+  const checkIntegerResult = checkInteger(newInput);
 
   if (
     input.length === 4 &&
     input.length === newInput.length &&
-    checkZeroResult
+    checkZeroResult &&
+    checkIntegerResult
   ) {
     // 길이가 4이고 중복이 없으면 true, 아니면 false
     return true;
