@@ -32,6 +32,7 @@ const restart = () => {
   return result.append(restartBtn);
 };
 
+// 입력에 0 있는지 확인하는 함수
 const checkZero = (input) => {
   for (let i = 0; i < input.length; i++) {
     if (input[i] === '0') {
@@ -42,6 +43,7 @@ const checkZero = (input) => {
   return true;
 };
 
+// 입력에 숫자가 아닌 것이 있는지 확인하는 함수
 const checkInteger = (input) => {
   for (let i = 0; i < input.length; i++) {
     if (isNaN(input[i]) === true) {
@@ -124,8 +126,8 @@ const handleClick = (event) => {
 
   if (checkInput(input)) {
     const attempt = [...input];
-    stringToInt(attempt);
 
+    stringToInt(attempt);
     checkAttempt(attempt);
 
     printResultAndLogs(attempt, strikeCnt, ballCnt);
